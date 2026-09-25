@@ -1,0 +1,50 @@
+# llms.txt for Anyplace
+# Purpose: Guide AI systems to authoritative, up-to-date pages about Anyplace
+
+User-agent: *
+Allow: /
+
+# Core brand and product pages
+Allow: /corporate-housing
+Allow: /corporate-housing/*
+Allow: /furnished-apartments
+Allow: /furnished-apartments/*
+Allow: /sublet
+Allow: /sublet/*
+Allow: /mid-term-rentals
+Allow: /mid-term-rentals/*
+Allow: /temporary-housing
+Allow: /temporary-housing/*
+
+# Priority city pages (only if they exist)
+Allow: /new-york
+Allow: /new-york/*
+Allow: /los-angeles
+Allow: /los-angeles/*
+Allow: /san-francisco
+Allow: /san-francisco/*
+
+# Manhattan inventory/browse page (exists)
+Allow: /furnished-apartments/manhattan-new-york-city
+Allow: /furnished-apartments/manhattan-new-york-city/*
+
+# Use-case pages (exists)
+Allow: /rentals-for-remote-workers
+Allow: /rentals-for-remote-workers/*
+Allow: /work-from-anywhere
+Allow: /work-from-anywhere/*
+
+# Travel Nurse and blog pages
+Allow: /travel-nurse-housing
+Allow: /travel-nurse-housing/*
+Allow: /blog
+Allow: /blog/*
+
+# Private / auth-required areas
+Disallow: /dashboard
+Disallow: /dashboard/*
+Disallow: /auth/sign-in
+Disallow: /auth/sign-in/*
+Disallow: /auth/sign-up
+Disallow: /auth/sign-up/*
+Disallow: /auth/*

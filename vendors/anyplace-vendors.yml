@@ -16,22 +16,33 @@ areas_vocabulary:
 - identity
 - mcp-hosting
 vendors:
-- vendor: akamai
-  name: Akamai
-  area: cdn
-  host: equityzen.com
-  evidence: header:server:akamaighost
-  signal: header
+- vendor: hubspot
+  name: HubSpot
+  area: hosting
+  host: support.anyplace.com
+  evidence: cname:hubspot.net
+  signal: cname
   confidence: high
+  kin_score: []
+- vendor: vercel
+  name: Vercel
+  area: hosting
+  host: dev.anyplace.com
+  evidence: cname:cname.vercel-dns.com
+  signal: docs-platform
+  confidence: medium
   kin_score: []
 reliance:
   areas_vendor_served:
-  - cdn
-  vendor_count: 1
+  - hosting
+  vendor_count: 2
   areas_observed: 12
   share_of_observable_areas: 0.083
   note: areas where a third party was DETECTED serving this provider; an area absent here was either self-run or not observed, and this script
     cannot tell those apart
 checked:
-- 'docs-platform: not probed'
-- equityzen.com (Website)
+- 'docs-platform: custom'
+- support.anyplace.com (Support)
+- dev.anyplace.com (Documentation)
+- www.anyplace.com (Website)
+- dev.anyplace.com (baseURL)
