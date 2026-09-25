@@ -1,23 +1,47 @@
 aid: anyplace
+
 name: Anyplace
-description: 'Anyplace is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Anyplace provides flexible-term, fully furnished apartments designed for remote workers, corporate teams, and digital nomads. Founded in 2017, the platform offers move‑in ready rentals with dedicated workspaces, high‑speed internet, and utilities included, enabling professionals to live and work anywhere with month‑to‑month leases. Their mission is to simplify the housing rental experience, making it straightforward, flexible, and enriching for users seeking temporary housing solutions across major cities.'
+
 url: https://raw.githubusercontent.com/api-evangelist/anyplace/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/anyplace-hosts.yml
+- type: Vendors
+  url: vendors/anyplace-vendors.yml
+- type: DomainSecurity
+  url: security/anyplace-domain-security.yml
 - type: Website
   url: https://equityzen.com/company/anyplace
+
+apis: []
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
